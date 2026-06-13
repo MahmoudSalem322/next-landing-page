@@ -1,0 +1,57 @@
+.navbar {
+  background-color: #302c2c;
+  color: white;
+  position: relative;
+  z-index: 100; /* لضمان بقاء القائمة فوق باقي عناصر الموقع */
+}
+
+.navContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0; /* مسحنا الـ 5% لأن الـ container يتكفل بالهوامش */
+}
+.logo a {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.navLinks {
+  display: flex;
+  gap: 2rem;
+}
+.navLinks li a {
+  transition: color 0.3s ease;
+}
+.navLinks li a:hover {
+  color: #0070f3; /* لون أزرق عند تمرير الماوس */
+}
+.hamburger {
+  display: none;
+  cursor: pointer;
+  padding-right: 15px;
+}
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+  .navLinks {
+    position: absolute;
+    top: 100%; /* تفتح تحت الناف بار مباشرة */
+    left: -100%; /* إخفاء القائمة خارج الشاشة من اليسار */
+    flex-direction: column;
+    background-color: #333;
+    width: 100%;
+    text-align: center;
+    transition: left 0.3s ease-in-out;
+    padding: 1rem 0;
+  }
+  .navLinks.active {
+    left: 0; /* إدخال القائمة إلى الشاشة عند تفعيل الكلاس */
+  }
+  .navLinks li {
+    margin: 1.5rem 0;
+  }
+  .logo a {
+    padding-left: 15px;
+  }
+}
