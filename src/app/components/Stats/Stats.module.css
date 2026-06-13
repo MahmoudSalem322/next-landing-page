@@ -1,0 +1,53 @@
+.statsSection {
+  padding: 4rem 0;
+  background-color: #0051bb; /* درجة أزرق أغمق من اللون الأساسي لتعطي فخامة */
+  color: white;
+}
+
+/* توزيع العناصر بجانب بعضها بالتساوي */
+.statsGrid {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+/* تنسيق صندوق الإحصائية الفردي */
+.statBox {
+  flex: 1;
+  text-align: center;
+}
+
+.statNumber {
+  font-size: 3.5rem; /* رقم كبير وواضح لجذب العين */
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  /* تأثير إضاءة خفيف على النص */
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.statLabel {
+  font-size: 1.1rem;
+  color: #e0e8ff; /* لون أبيض مائل للزرقة الخفيفة ليناسب الخلفية */
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+/* --- التجاوب الذكي مع الشاشات الصغيرة (Mobile) --- */
+@media (max-width: 768px) {
+  .statsGrid {
+    flex-wrap: wrap; /* السماح للعناصر بالنزول لسطر جديد */
+    justify-content: center;
+  }
+
+  .statBox {
+    /* كل صندوق يأخذ نصف عرض الشاشة تقريباً (ناقص الـ gap) 
+       ليظهر التصميم كـ 2 فوق و 2 تحت بشكل متناسق جداً */
+    flex: calc(50% - 1rem);
+    margin-bottom: 1.5rem;
+  }
+
+  .statNumber {
+    font-size: 2.5rem; /* تصغير الخط قليلاً ليناسب الجوال */
+  }
+}
