@@ -1,0 +1,91 @@
+.heroSection {
+  padding: 6rem 0;
+  background-color: #f8f9fa; /* لون خلفية مريح للعين */
+  min-height: calc(100vh - 70px); /* ليملأ الشاشة مع ترك مساحة للناف بار */
+  display: flex;
+  align-items: center;
+}
+
+.heroContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem; /* مسافة ممتازة بين النص والصورة */
+}
+.textContent {
+  flex: 1; /* يأخذ 50% من المساحة */
+}
+.textContent h1 {
+  font-size: 45px;
+  color: #333;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+.textContent p {
+  font-size: 1.2rem;
+  color: #616161;
+  margin-bottom: 2.5rem;
+  line-height: 1.2;
+}
+.buttonsGroup {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-start;
+}
+.primaryBtn,
+.secondaryBtn {
+  padding: 0.8rem 2rem;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+.primaryBtn {
+  background-color: #0070f3;
+  color: white;
+}
+.primaryBtn:hover {
+  background-color: #0051a8;
+}
+
+.secondaryBtn {
+  background-color: transparent;
+  color: #0070f3;
+  border: 2px solid #0070f3;
+}
+.secondaryBtn:hover {
+  background-color: #0070f3;
+  color: white;
+}
+.imageContent {
+  flex: 1; /* يأخذ الـ 50% المتبقية */
+  display: flex;
+  justify-content: center;
+}
+.placeholder {
+  width: 100%;
+  max-width: 500px;
+  height: 350px;
+  background-color: #e9ecef;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #adb5bd;
+  font-size: 1.5rem;
+  border: 2px dashed #ced4da;
+}
+@media (max-width: 768px) {
+  .heroContent {
+    flex-direction: column; /* كسر التصميم ليكون عمودياً */
+    text-align: center; /* توسيط النصوص */
+  }
+  .textContent h1 {
+    font-size: 2.2rem; /* تصغير العنوان قليلاً */
+  }
+  .buttonsGroup {
+    justify-content: center; /* توسيط الأزرار في الجوال */
+  }
+  .placeholder {
+    height: 250px; /* تصغير حجم الصورة الرمزية */
+  }
+}
