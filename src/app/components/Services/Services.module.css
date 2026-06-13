@@ -1,0 +1,63 @@
+.servicesSection {
+  padding: 6rem 0;
+  background-color: #ffffff; /* لون خلفية أبيض لكسر لون الرمادي في الـ Hero */
+}
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+.sectionHeader h2 {
+  font-size: 2.5rem;
+  color: #111;
+  margin-bottom: 1rem;
+}
+.sectionHeader p {
+  font-size: 1.1rem;
+  color: #666;
+  max-width: 600px;
+  margin: 0 auto;
+}
+.cardsGrid {
+  display: flex;
+  justify-content: space-between;
+  gap: 3rem; /* مسافة ثابتة بين البطاقات */
+}
+.card {
+  flex: 1; /* تجعل البطاقات الثلاثة تتقاسم المساحة بالتساوي تماماً */
+  background: #ffffff;
+  padding: 2.5rem 2rem;
+  border-radius: 12px;
+  text-align: center;
+  border: 1px solid #eee;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02); /* ظل خفيف جداً */
+  transition: all 0.3s ease; /* حركة ناعمة عند الـ hover */
+}
+.card:hover {
+  transform: translateY(-10px); /* رفع البطاقة قليلاً لأعلى */
+  box-shadow: 0 12px 20px rgba(0, 70, 243, 0.1); /* زيادة الظل مع مسحة زرقاء خفيفة */
+  border-color: #0070f3; /* تغيير لون الحواف للون الأساسي */
+}
+.iconWrapper {
+  color: #0070f3; /* تلوين الأيقونة بالأزرق */
+  margin-bottom: 1.5rem;
+}
+.card h3 {
+  font-size: 1.4rem;
+  color: #222;
+  margin-bottom: 1rem;
+}
+.card p {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.6;
+}
+/* --- التجاوب مع الجوال (Mobile) --- */
+@media (max-width: 768px) {
+  .cardsGrid {
+    flex-direction: column; /* ترتيب البطاقات فوق بعضها في الشاشات الصغيرة */
+  }
+
+  .sectionHeader h2 {
+    font-size: 2rem;
+  }
+}
